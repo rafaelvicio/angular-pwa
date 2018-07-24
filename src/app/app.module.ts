@@ -5,13 +5,19 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import { HttpClientModule } from '@angular/common/http';
+
+import { ListPessoaComponent } from './pessoa/list-pessoa/list-pessoa.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListPessoaComponent
   ],
   imports: [
     BrowserModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

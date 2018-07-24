@@ -20,5 +20,17 @@
         "/assets/**"
       ]
     }
+  }],
+  "dataGroups": [{
+    "name": "api-mocky",
+    "urls": [
+      "http://www.mocky.io/v2/5b56834631000011004d1dd7"
+    ],
+    "cacheConfig": {
+      "maxSize": 100,
+      "maxAge": "3d",
+      "timeout": "1m",
+      "strategy": "freshness"
+    }
   }]
 }
